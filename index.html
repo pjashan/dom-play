@@ -1,76 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-     <title>DOM  play</title>
-  <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/nav.css" />
-  <style>
-   /* div#play span{
-      background-color: yellow;
-    }*/
-   
-  </style>
- </head>
- <body>
-     <header>
-     <h1>DOM play</h1>
-       
-        
-     </header>
-     
-   <main class="wrapper">
-     <div id="play">
-       <p><span data-actor= "hamlet">Hamlet:  To be or not to be?</span></p>
-       <p><span data-actor= "skull">Skull:  Are you talking to me?</span></p>
-       <p><span data-actor= "hamlet">Hamlet:  Did you say something?</span></p>
-       <p><span data-actor= "skull">Skull:  No, i am only skull.</span></p>
-       <p><span data-actor= "hamlet">Hamlet: Good! I thought I was going crazy! </span></p>
-       <p><span data-actor= "romeo">Romeo: Good! I thought I was going crazy! </span></p>
 
-       </div>
-  <footer>
-      <p><small>&copy; 2022 by 
-          Jashanpreet Singh, All Rights Reserved ~ 
-          <a id="html-checker" href="#">Check HTML</a> ~ 
-          <a id="css-checker" href="#">Check CSS</a></small>
-    </p>
-    </footer>
-  </main>
-  <script>
-   
-   const spans = document.querySelectorAll('div#play span');
+<head>
+    <title>DOM Play</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <style>
+        /*
+        div#play span {
+            background-color: yellow;
+        }
+        */
+    </style>
+</head>
 
-console.log(spans);
+<body>
+    <header>
+        <h1>DOM Play</h1>
+    </header>
 
-for(const mySpan of spans){
-  mySpan.addEventListener('click',function(ev){
-    //alert(mySpan.dataset.actor);
-    highlightActor(mySpan.dataset.actor);
-  });
-}
+    <main class="wrapper">
 
-function highlightActor(myActor){
+        <h3>This page uses JavaScript data attributes and a NodeList to highlight actors in a play by clicking on the
+            names of the actors.</h3>
 
-  for(const mySpan of spans){
+        <div id="play">
+            <p><span data-actor="lucius">Lucius: Honey?!</span></p>
+            <p><span data-actor="honey">Honey: (offscreen) What?</span></p>
+            <p><span data-actor="lucius">Lucius: Where’s my supersuit!?</span></p>
+            <p><span data-actor="honey">Honey: What!?</span></p>
+            <p><span data-actor="lucius">Lucius: WHERE! IS! MY! SUPER! SUIT??!!!???</span></p>
+            <p><span data-actor="honey">Honey: I, uh...put it away.</span></p>
+            <p><span data-actor="lucius">Lucius: Where?!?!?!?!</span></p>
+            <p><span data-actor="honey">Honey: Why do you need to know?!</span></p>
+            <p><span data-actor="lucius">Lucius: I NEED IT!!!</span></p>
+            <p><span data-actor="honey">Honey: Uh-uh! Don’t you think about running off doing no derrin’-do! We’ve been planning this dinner for two months!</span></p>
+            <p><span data-actor="lucius">Lucius: The public is in danger!!</span></p>
+            <p><span data-actor="honey">Honey: My evening’s in danger!!</span></p>
+            <p><span data-actor="lucius">Lucius: YOU TELL ME WHERE MY SUIT IS, WOMAN!! WE'RE TALKING ABOUT THE GREATER GOOD!!!!</span></p>
+            <p><span data-actor="honey">Honey: Greater good?! I am your wife! I’m the greatest good you are ever gonna get!!</span></p>
+        </div>
+        <footer>
+            <p><small>&copy; 2022 by
+                    Jashanpreet Singh, All Rights Reserved ~
+                    <a id="html-checker" href="#">Check HTML</a> ~
+                    <a id="css-checker" href="#">Check CSS</a></small>
+            </p>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/dom-play.js"></script>
+</body>
 
-    if(myActor == mySpan.dataset.actor){
-      mySpan.style.backgroundColor='yellow';
-    }else{
-      mySpan.style.backgroundColor='white';
-  }
-
-
-
-
-  }
-
-}
-           </script>
-
-  <script src="js/main.js"></script>
-     
- </body>
 </html>
